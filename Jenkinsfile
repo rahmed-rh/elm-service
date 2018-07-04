@@ -1,4 +1,5 @@
 openshift.withCluster() {
+  openshift.withCredentials('6xxlU-goJM4auSHKeV38AACtseSansl35fcOrGQLM6w') {
   def PROJECT_NAME = "test-app"
   def cm
 
@@ -55,4 +56,5 @@ openshift.withCluster() {
    }
 
   }
+}
 }
