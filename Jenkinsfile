@@ -4,7 +4,7 @@ openshift.withCluster() {
 
 
   openshift.withProject(PROJECT_NAME) {
-   def FIS_1_GIT_URL = "https://github.com/rahmed-rh/elm-service"
+   def APP_1_GIT_URL = "https://github.com/rahmed-rh/elm-service"
    echo "Hello from project ${openshift.project()} in cluster ${openshift.cluster()}"
 
    // Mark the code checkout 'stage'....
