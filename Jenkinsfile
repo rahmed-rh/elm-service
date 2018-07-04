@@ -48,9 +48,6 @@ openshift.withCluster() {
 	     sh "mvn clean compile"
     }
     stage('Deploy to DEV') {
-	    //echo "Deleting OLD JDG Env if exist"
-	    //openshift.selector( 'all', [ application: cm.data['fis-1-app-name'] ] ).delete()
-	    //openshift.selector( 'pvc', [ application: cm.data['fis-1-app-name'] ] ).delete()
      	// Run the fabric8
      	sh "mvn fabric8:deploy"
     }
