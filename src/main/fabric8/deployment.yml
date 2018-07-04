@@ -1,12 +1,9 @@
-metadata:
-  labels:
-    app: elm-app
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        app: elm-app
+        app: elm-fis
     spec:
       containers:
         - 
