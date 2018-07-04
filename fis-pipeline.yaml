@@ -2,7 +2,7 @@ apiVersion: v1
 kind: BuildConfig
 metadata:
   creationTimestamp: null
-  name: fis-rest-1-pipeline
+  name: fis-sample-pipeline
 spec:
   nodeSelector: {}
   output: {}
