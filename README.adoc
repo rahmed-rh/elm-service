@@ -1,0 +1,49 @@
+:launchURL: https://developers.redhat.com/launch
+:image: registry.access.redhat.com/fuse7/fuse-java-openshift:1.0
+
+= Safaricom Authentication LDAP Microservice
+
+== Running the project on OpenShift cluster
+To deploy the application to OpenShift cluster:
+
+* Download the project and extract the archive on your local filesystem.
+* Log in to your OpenShift cluster:
++
+[source,bash,options="nowrap",subs="attributes+"]
+----
+$ oc login -u {user} -p {password}
+----
+* Import base images to project openshift so it is available to any project in the cluster:
++
+[source,bash,options="nowrap",subs="attributes+"]
+----
+$ oc create -f https://raw.githubusercontent.com/jboss-fuse/application-templates/master/fis-image-streams.json -n openshift
+----
+
+[TIP]
+====
+In case some of the image already exists you can use 
+
+$ oc replace -f https://raw.githubusercontent.com/jboss-fuse/application-templates/master/fis-image-streams.json  -n openshift
+
+====
+
+* Create a new OpenShift project or using an existing one:
++
+[source,bash,options="nowrap",subs="attributes+"]
+----
+$ oc new-project MY_PROJECT_NAME
+----
+
+* Build and deploy the project to the OpenShift cluster:
++
+[source,bash,options="nowrap",subs="attributes+"]
+----
+$ mvn clean -DskipTests fabric8:deploy -Popenshift
+----
+
+* In your browser, navigate to the `MY_PROJECT_NAME` project in the OpenShift console.
+Wait until you can see that the pod for the `fuse-configmap-booster` application has started up.
+
+* Just above the entry for the `sfc-ldap-service` application on the `Overview` page, there is a URL of the form `http://sfc-ldap-service-MY_PROJECT_NAME.xxxxx`.
+Click on the URL to access the application and follow the instructions on that page.
