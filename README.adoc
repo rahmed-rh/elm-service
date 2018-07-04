@@ -1,7 +1,7 @@
 :launchURL: https://developers.redhat.com/launch
 :image: registry.access.redhat.com/fuse7/fuse-java-openshift:1.0
 
-= Safaricom Authentication LDAP Microservice
+= Sample Elm Microservice
 
 == Running the project on OpenShift cluster
 To deploy the application to OpenShift cluster:
