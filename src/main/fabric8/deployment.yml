@@ -1,16 +1,22 @@
+metadata:
+  labels:
+    app: elm-app
 spec:
+  replicas: 1
   template:
+    metadata:
+      labels:
+        app: elm-app
     spec:
-      serviceAccountName: "sample-service-sa"
       containers:
-        -
+        - 
           resources:
-           requests:
-             cpu: "0.2"
-             memory: 256Mi
-           limits:
-             cpu: "1.0"
-             memory: 256Mi
+            requests:
+              cpu: 
+              memory: 
+            limits:
+              cpu: 
+              memory: 512Mi
           env:
-          - name: SPRING_APPLICATION_JSON
-            value: '{"server":{"undertow":{"io-threads":1, "worker-threads":2 }}}'
+          - name: JAVA_DIAGNOSTICS
+            value: true
