@@ -1,7 +1,7 @@
 spec:
   template:
     spec:
-      serviceAccountName: "sfc-ldap-service-sa"
+      serviceAccountName: "sample-service-sa"
       containers:
         -
           resources:
