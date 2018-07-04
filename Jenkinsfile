@@ -49,7 +49,7 @@ openshift.withCluster() {
     }
     stage('Deploy to DEV') {
      	// Run the fabric8
-     	sh "mvn fabric8:deploy"
+     	sh "mvn fabric8:deploy -Popenshift"
     }
 
    }
