@@ -46,7 +46,7 @@ openshift.withCluster() {
      	// Mark the code build 'stage'....
     stage('Maven Build') {
 	     // Run the maven build
-	     sh "mvn clean compile"
+	     sh "mvn clean install -Popenshift"
     }
     stage('Deploy to DEV') {
      	// Run the fabric8
