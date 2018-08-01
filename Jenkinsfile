@@ -50,7 +50,7 @@ openshift.withCluster() {
     }
     stage('Deploy to DEV') {
      	// Run the fabric8
-     	sh "mvn fabric8:deploy -Popenshift"
+     	sh "mvn fabric8:deploy -Popenshift -Dfabric8.namespace=elm-sample-service"
     }
 
    }
