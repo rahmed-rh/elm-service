@@ -1,0 +1,6 @@
+NAME                   ROLE                    USERS     GROUPS                                      SERVICE ACCOUNTS     SUBJECTS
+edit                   /edit                                                                         jenkins-ci/jenkins   
+jenkins_edit           /edit                                                                         jenkins              
+system:deployer        /system:deployer                                                              deployer             
+system:image-builder   /system:image-builder                                                         builder              
+system:image-puller    /system:image-puller              system:serviceaccounts:elm-sample-service                        
